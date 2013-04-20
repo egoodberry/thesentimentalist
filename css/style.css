@@ -1,0 +1,46 @@
+body {
+  font-family: "brandon-grotesque";
+}
+
+a {
+  color: #D01254;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #D01254;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+h2.boxed {
+  border: solid 1px #D01254;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+h3 {
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
