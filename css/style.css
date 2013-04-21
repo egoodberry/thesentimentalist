@@ -43,6 +43,9 @@ h3 {
 form {
   margin-top: 20px;
 }
+form input {
+  border-radius: 0;
+}
 input[type=text], input[type=email] {
   background: #fef4f7;
   border: solid 1px #000;
@@ -60,18 +63,29 @@ form .email {
   overflow: hidden;
 }
 input[type=submit] {
-  background: #D01254;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0px 20px;
   height: 34px;
-  border: none;
   font-family: "brandon-grotesque";
+  background: #D01254;
+  color: #fff;
+  border: none;
+  -webkit-appearance: none;
+}
+input[type=submit].desktop {
   margin: 2px 0 0 -2px;
   vertical-align: top;
   float: right;
 }
+input[type=submit].mobile {
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
 
 /* account for fixed header */
 .content { padding-top: 50px; }
@@ -102,6 +116,12 @@ input[type=submit] {
     width: auto;
   }
   #photos .nav {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
     display: block;
   }
 }
