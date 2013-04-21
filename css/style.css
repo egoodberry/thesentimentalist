@@ -32,15 +32,84 @@ h3 {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
-
 .cf:after {
     clear: both;
 }
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 .cf {
     *zoom: 1;
+}
+
+/* FORMS */
+form {
+  margin-top: 20px;
+}
+input[type=text], input[type=email] {
+  background: #fef4f7;
+  border: solid 1px #000;
+  font-family: "brandon-grotesque";
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+}
+form .email-wrapper {
+  overflow: hidden;
+}
+form .email {
+  display: block;
+  overflow: hidden;
+}
+input[type=submit] {
+  background: #D01254;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0px 20px;
+  height: 34px;
+  border: none;
+  font-family: "brandon-grotesque";
+  margin: 2px 0 0 -2px;
+  vertical-align: top;
+  float: right;
+}
+
+/* account for fixed header */
+.content { padding-top: 50px; }
+
+@media only screen and (max-width: 1100px) {
+  .remember-me {
+    display: none;
+  }
+}
+@media only screen and (max-width: 875px) {
+  #header .links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #header {
+    position: static;
+    min-width: 0;
+    height: auto;
+  }
+  #header nav {
+    float: none;
+  }
+  #home {
+    padding-top: 0;
+  }
+  #about p.summary {
+    width: auto;
+  }
+  #photos .nav {
+    display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #header nav a {
+    display: block;
+  }
+  #home p {
+    width: auto;
+  }
 }

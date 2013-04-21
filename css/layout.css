@@ -22,10 +22,10 @@ body {
   height: 50px;
   background: #fef2f1;
   box-shadow: 0px 5px 5px rgba(0,0,0,.5);
-  min-width: 800px;
+  min-width: 875px;
 }
 #header nav {
-  padding: 10px 20px;
+  padding: 10px 0 10px 20px;
   float: left;
 }
 #header nav a {
@@ -42,25 +42,20 @@ body {
 #header .remember-me {
   float: left;
   padding-top: 18px;
-  margin-left: 30px;
 }
 #header .links {
   float: right;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 0;
 }
 #header .links a {
   text-decoration: none;
   margin-left: 30px;
 }
 
-#content {
-  padding-top: 48px;
-}
-
 /* HOME */
-#home {
+#home .inner-content {
   text-align: center;
-  height: 635px;
+  height: 620px;
 }
 #home .logo {
   margin-top: 140px;
@@ -72,17 +67,17 @@ body {
   color: #fff;
   border: solid 2px #fff;
   padding: 20px 20px;
-  box-sizing: border-box;
+  font-size: 20px;
 }
 
 /* ABOUT US */
-#about {
+#about .inner-content {
   color: #D01254;
   text-align: center;
-  background: url(/images/about-bg.jpg) no-repeat center 280px;
+  background: url(../images/about-bg.jpg) no-repeat center 210px;
 }
 #about h2.title {
-  margin: 55px 0 30px 0;
+  margin-bottom: 30px;
 }
 #about p.summary {
   width: 658px;
@@ -91,7 +86,10 @@ body {
   border-top: solid 1px #D01254;
 }
 #about .about-founders {
-  margin-top: 450px;
+  margin-top: 430px;
+}
+#about .about-founders .krista, #about .about-founders .gabi {
+  margin-bottom: 20px;
 }
 #about .about-founders .gabi {
   margin-top: 25px;
@@ -102,7 +100,6 @@ body {
 
 /* DESIGNERS */
 #designers {
-  margin-top: 35px;
   text-align: center;
 }
 #designers hr {
@@ -136,10 +133,13 @@ body {
 }
 
 /* FAQ */
-#faq .banner {
+.faq-banner {
   margin: 20px 0 45px 0;
   height: 400px;
-  background: url('/images/faq-bg.jpg') no-repeat;
+  background: url('../images/faq-bg.jpg') no-repeat;
+}
+#faq {
+  margin-top: -210px;
 }
 #faq h2 {
   color: #000;
@@ -147,9 +147,9 @@ body {
   padding: 20px 0;
   text-align: center;
   width: 220px;
-  margin: 0 auto;
-  margin-top: 250px;
   letter-spacing: 4px;
+  margin: 0 auto;
+  margin-bottom: 85px;
 }
 #faq section {
   min-height: 920px;
@@ -247,17 +247,17 @@ body {
 }
 
 /* CONTACT */
-#contact {
-  margin-top: 115px;
-  text-align: center;
-}
-#contact .banner {
+.contact-banner {
   height: 566px;
-  background: url('/images/contact-bg.jpg') no-repeat;
+  background: url('../images/contact-bg.jpg') no-repeat;
+  margin-top: 115px;
+}
+#contact {
+  margin-top: -75px;
+  text-align: center;
 }
 #contact h2 {
   margin: 0 auto;
-  margin-top: -50px;
   margin-bottom: 40px;
   background: #D01254;
   color: #fff;
@@ -291,7 +291,10 @@ body {
   font-size: 18px;
 }
 
-/* CONTACT FORM */
+/* MAILING LIST FORM */
+#mailing-list {
+  margin-top: 25px;
+}
 
 /* FOOTER */
 #footer {
