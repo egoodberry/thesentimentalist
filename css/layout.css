@@ -29,6 +29,7 @@ body {
   float: left;
 }
 #header nav a {
+  font-size: 12px;
   font-weight: 600;
   font-family: "adobe-caslon-pro", Times;
   color: #58595b;
@@ -40,8 +41,9 @@ body {
   color: #D01254;
 }
 #header .remember-me {
-  float: left;
   padding-top: 18px;
+  position: absolute;
+  left: 44%;
 }
 #header .links {
   float: right;
