@@ -134,16 +134,17 @@ body {
 
 /* FAQ */
 .faq-banner {
-  margin: 20px 0 45px 0;
-  height: 400px;
-  background: url('../images/faq-bg.jpg') no-repeat;
+  margin-top: 20px;
+}
+.faq-banner img {
+  width: 100%;
 }
 #faq {
-  margin-top: -210px;
+  margin-top: -170px;
 }
 #faq h2 {
-  color: #000;
-  border: solid 3px #000;
+  color: #fff;
+  border: solid 3px #fff;
   padding: 20px 0;
   text-align: center;
   width: 220px;
