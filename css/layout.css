@@ -150,17 +150,17 @@ body {
   width: 100%;
 }
 #faq {
-  margin-top: -170px;
+  margin-top: -200px;
 }
 #faq h2 {
   color: #fff;
   border: solid 3px #fff;
-  padding: 20px 0;
+  padding: 38px 0;
   text-align: center;
   width: 220px;
   letter-spacing: 4px;
   margin: 0 auto;
-  margin-bottom: 85px;
+  margin-bottom: 75px;
 }
 #faq section {
   min-height: 920px;
