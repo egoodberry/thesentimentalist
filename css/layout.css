@@ -52,7 +52,26 @@ body {
 #header .links a {
   text-decoration: none;
   margin-left: 30px;
+  /* display: inline-block; */
+  /* height: 24px; */
+  /* width: 28px; */
+  /* background-repeat: no-repeat; */
 }
+/* #header .links a:hover { */
+  /* background-position-y: -24px; */
+/* } */
+/* #header .links .twitter { */
+  /* background-image: url(../images/twitter.png); */
+/* } */
+/* #header .links .facebook { */
+  /* background-image: url(../images/facebook.png); */
+/* } */
+/* #header .links .instagram { */
+  /* background-image: url(../images/instagram.png); */
+/* } */
+/* #header .links .blog { */
+  /* background-image: url(../images/blog.png); */
+/* } */
 
 #back-to-top {
   display: none;
