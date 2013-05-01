@@ -296,6 +296,7 @@ body {
 .contact-banner {
   height: 566px;
   background: url('../images/contact-bg.jpg') no-repeat;
+  background-size: cover;
   margin-top: 115px;
 }
 #contact {
