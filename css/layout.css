@@ -109,6 +109,7 @@ body {
 #home .inner-content {
   text-align: center;
   height: 620px;
+  background-image: url(../images/home-bg.jpg);
 }
 #home .logo {
   margin-top: 140px;
