@@ -106,10 +106,15 @@ body {
 }
 
 /* HOME */
+#home {
+  margin-bottom: 140px;
+}
 #home .inner-content {
   text-align: center;
-  height: 620px;
+  height: 760px;
   background-image: url(../images/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #home .logo {
   margin-top: 140px;

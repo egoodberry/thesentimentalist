@@ -178,55 +178,54 @@
 
     // Update menu
     base.findLocation = function(){
-      if (window.hash) {
-        var tar, locLeft, locTop, sel, elBottom, elHeight, elWidth, elRight,
-        winWidth = base.$win.width(),
-        winLeft = base.$win.scrollLeft(),
-        winTop = base.$win.scrollTop(),
-        winRight = winLeft + winWidth,
-        winBottom = winTop + base.$win.height(),
-        docHeight = base.$doc.height();
-        base.$items.removeClass(o.inViewClass);
-        // Make content fit on screen
-        if (o.fitContent) {
-          base.$content.width( winWidth - base.leftMargin - base.rightMargin );
+      var tar, locLeft, locTop, sel, elBottom, elHeight, elWidth, elRight,
+      winWidth = base.$win.width(),
+      winLeft = base.$win.scrollLeft(),
+      winTop = base.$win.scrollTop(),
+      winRight = winLeft + winWidth,
+      winBottom = winTop + base.$win.height(),
+      docHeight = base.$doc.height();
+      base.$items.removeClass(o.inViewClass);
+      // Make content fit on screen
+      if (o.fitContent) {
+        base.$content.width( winWidth - base.leftMargin - base.rightMargin );
+      }
+      // cycling through each link during the scroll may be slow on some computers/browsers
+      base.$links.each(function(i){
+        sel = $(this).attr(o.targetAttr);
+        tar = (sel === "#" || sel.length <= 1) ? '' : $(sel); // ignore links that don't point anywhere
+        if (tar.length) {
+          locTop = Math.ceil(tar.offset().top);
+          locLeft = Math.ceil(tar.offset().left);
+          elHeight = tar.outerHeight();
+          elBottom = locTop + elHeight + o.bottomMargin;
+          elWidth = tar.outerWidth();
+          elRight = locLeft + elWidth;
+          // in view class
+          if ( locTop < winBottom && ( locTop + elHeight - o.bottomMargin > winTop || elBottom > winBottom ) &&
+              locLeft < winRight && ( locLeft + elWidth - o.bottomMargin > winLeft || elRight > winRight ) ) {
+            base.$items.eq(i).addClass(o.inViewClass);
+          }
         }
-        // cycling through each link during the scroll may be slow on some computers/browsers
-        base.$links.each(function(i){
-          sel = $(this).attr(o.targetAttr);
-          tar = (sel === "#" || sel.length <= 1) ? '' : $(sel); // ignore links that don't point anywhere
-          if (tar.length) {
-            locTop = Math.ceil(tar.offset().top);
-            locLeft = Math.ceil(tar.offset().left);
-            elHeight = tar.outerHeight();
-            elBottom = locTop + elHeight + o.bottomMargin;
-            elWidth = tar.outerWidth();
-            elRight = locLeft + elWidth;
-            // in view class
-            if ( locTop < winBottom && ( locTop + elHeight - o.bottomMargin > winTop || elBottom > winBottom ) &&
-                locLeft < winRight && ( locLeft + elWidth - o.bottomMargin > winLeft || elRight > winRight ) ) {
-              base.$items.eq(i).addClass(o.inViewClass);
-            }
-          }
-        });
-        // add selected class. If at the document end, select the last element
-        sel = ( winBottom + o.bottomMargin >= docHeight ) ? ':last' : ':first';
-        base.$items.removeClass(o.selectedClass);
-        base.$curItem = base.$items.filter('.' + o.inViewClass + sel).addClass(o.selectedClass);
+      });
+      // add selected class. If at the document end, select the last element
+      sel = ( winBottom + o.bottomMargin >= docHeight ) ? ':last' : ':first';
+      base.$items.removeClass(o.selectedClass);
+      base.$curItem = base.$items.filter('.' + o.inViewClass + sel).addClass(o.selectedClass);
 
-        // update current content class while scrolling
-        if (base.$curItem[0] !== base.$lastItem[0]) {
-          base.$lastItem = base.$curItem;
-          base.$content.removeClass(o.currentContent);
-          sel = $('.' + o.selectedClass + (o.selectedAppliedTo === o.link ? '' : ' ' + o.link)).attr(o.targetAttr);
-          base.$curContent = $(sel)
-          .closest('.' + o.contentClass)
-          .addClass(o.currentContent);
-          if (base.initialized && typeof o.changed === 'function') {
-            o.changed( base, base.$curContent );
-          }
+      // update current content class while scrolling
+      if (base.$curItem[0] !== base.$lastItem[0]) {
+        base.$lastItem = base.$curItem;
+        base.$content.removeClass(o.currentContent);
+        sel = $('.' + o.selectedClass + (o.selectedAppliedTo === o.link ? '' : ' ' + o.link)).attr(o.targetAttr);
+        base.$curContent = $(sel)
+        .closest('.' + o.contentClass)
+        .addClass(o.currentContent);
+        if (base.initialized && typeof o.changed === 'function') {
+          o.changed( base, base.$curContent );
         }
       }
+
     };
 
     // Run initializer

@@ -107,14 +107,26 @@ input[type=submit].mobile {
   #header .links {
     display: none;
   }
+  #header .nav-links {
+    position: static;
+  }
   #home {
     padding-top: 0;
   }
   #about p.summary {
     width: auto;
   }
+  #faq {
+    margin-top: -125px;
+  }
+  #faq h2 {
+    border: none;
+  }
   #photos .nav {
     display: block;
+  }
+  .contact-banner {
+    background-position-x: 50%;
   }
   .desktop {
     display: none;
