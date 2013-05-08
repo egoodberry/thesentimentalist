@@ -234,8 +234,29 @@
       <div id="press" class="content cf">
         <h2>Press</h2>
         <hr />
-        <p>Stay tuned...</p>
-        <a href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf"><h2 class="boxed">Download Press Kit</h2></a>
+
+        <?php
+          query_posts('post_type=press');
+          if (have_posts()) {
+          while (have_posts()) {
+            the_post();
+            $date = get_post_meta($post->ID, 'date', true);
+            $link = get_post_meta($post->ID, 'link', true);
+        ?>
+          <div class="press-item">
+            <h3><?php the_title(); ?></h3>
+            <p><?php echo $date; ?></p>
+            <?php if ($link) { ?>
+              <p><a href="<?php echo $link; ?>">Read more.</a></p>
+            <?php } ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
+            <?php the_content(); ?>
+          </div>
+        <?php
+        } } else { ?>
+          <p>Stay tuned...</p>
+          <a href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf"><h2 class="boxed">Download Press Kit</h2></a>
+        <?php } ?>
       </div>
 
       <section class="contact-banner"></section>
