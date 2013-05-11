@@ -21,6 +21,7 @@
   <script src="<?php bloginfo('template_directory'); ?>/js/nav.js"></script>
   <script src="<?php bloginfo('template_directory'); ?>/js/flickr.js"></script>
   <script src="<?php bloginfo('template_directory'); ?>/js/form.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/js/press.js"></script>
 </head>
 <body>
 
@@ -218,7 +219,7 @@
 
     </div>
 
-    <div id="photos">
+    <div id="photos" class="slideshow">
       <a href="http://instagram.com/thesentimentalistatl">
         <h2 class="boxed">Follow us on Instagram</h2>
       </a>
@@ -229,36 +230,75 @@
       </section>
     </div>
 
-    <div class="container">
+    <div id="press" class="content cf slideshow">
+      <h2>Press</h2>
+      <hr />
 
-      <div id="press" class="content cf">
-        <h2>Press</h2>
-        <hr />
+      <?php
+        query_posts('post_type=press');
+        if (have_posts()) {
+      ?>
+        <p>We've been featured in the following places. Click on an article to read more.</p>
+        <a class="nav prev"><</a>
+        <a class="nav next">></a>
+        <div id="press-thumbnail-wrapper">
+          <ul>
+      <?php
+        while (have_posts()) {
+          the_post();
+          $date = get_post_meta($post->ID, 'date', true);
+          $link = get_post_meta($post->ID, 'link', true);
+      ?>
+            <li class="press-item-thumbnail" data-press-id="<?php echo $post->ID; ?>">
+              <div class="top">
+                <?php the_post_thumbnail('thumbnail'); ?>
+              </div>
+              <div class="title">
+                <?php the_title(); ?>
+              </div>
+            </li>
+            <div class="press-item" data-press-id="<?php echo $post->ID; ?>">
+              <section class="meta">
+                <div class="text">
+                  <?php the_title(); ?>
+                </div>
+                <div class="text">
+                  <?php echo $date; ?>
+                </div>
+                <?php if ($link) { ?>
+                  <div>
+                    <a href="<?php echo $link; ?>">Read more</a>
+                  </div>
+                <?php } ?>
+              </section>
+              <section class="feature">
+                <?php the_content(); ?>
+              </section>
+              <section class="actions">
+                <a class="close">
+                  <img src="<?php bloginfo('template_directory'); ?>/images/x.png">
+                  Close
+                </a>
+              </section>
+            </div>
+      <?php
+        }
+      ?>
+          </ul>
+        </div>
+      <?php } else { ?>
+        <p>Stay tuned...</p>
+        <a href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf"><h2 class="boxed">Download Press Kit</h2></a>
+      <?php } ?>
+    </div>
 
-        <?php
-          query_posts('post_type=press');
-          if (have_posts()) {
-          while (have_posts()) {
-            the_post();
-            $date = get_post_meta($post->ID, 'date', true);
-            $link = get_post_meta($post->ID, 'link', true);
-        ?>
-          <div class="press-item">
-            <h3><?php the_title(); ?></h3>
-            <p><?php echo $date; ?></p>
-            <?php if ($link) { ?>
-              <p><a href="<?php echo $link; ?>">Read more.</a></p>
-            <?php } ?>
-            <?php the_post_thumbnail('thumbnail'); ?>
-            <?php the_content(); ?>
-          </div>
-        <?php
-        } } else { ?>
-          <p>Stay tuned...</p>
-          <a href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf"><h2 class="boxed">Download Press Kit</h2></a>
-        <?php } ?>
+    <div class="press-item-detail cf">
+      <div class="container">
+        <div class="inner grid_12"></div>
       </div>
+    </div>
 
+    <div class="container">
       <section class="contact-banner"></section>
       <div id="contact" class="content cf">
         <h2>Contact</h2>

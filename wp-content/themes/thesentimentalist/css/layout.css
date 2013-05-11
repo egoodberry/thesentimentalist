@@ -240,41 +240,11 @@ body {
 #photos {
   background: #fff;
   text-align: center;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
 }
 #photos h2 {
   margin: 45px 0;
 }
-#photos .nav {
-  display: none;
-  position: absolute;
-  top: 250px;
-  z-index: 10;
-  height: 100px;
-  width: 75px;
-  background: #dbe3e9;
-  opacity: .5;
-  cursor: pointer;
-  line-height: 95px;
-  font-size: 50px;
-  color: #000;
-}
-#photos .nav:hover {
-  opacity: .9;
-}
-#photos .prev {
-  left: 0;
-  border-radius: 0 8px 8px 0;
-}
-#photos .next {
-  right: 0;
-  border-radius: 8px 0 0 8px;
-}
-#photos:hover .nav {
-  display: block;
-}
+
 #photos .photo {
   margin: 0 15px;
 }
@@ -295,7 +265,74 @@ body {
   color: #D01254;
   margin-bottom: 75px;
 }
-#press a {
+.press-item-thumbnail {
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 60px;
+  width: 300px;
+  border: solid 2px #000;
+  cursor: pointer;
+}
+.press-item-thumbnail.active {
+  border-color: #D01254;
+}
+.press-item-thumbnail .top {
+  height: 200px;
+  position: relative;
+}
+.press-item-thumbnail img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.press-item-thumbnail .title {
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 15px;
+}
+.press-item-thumbnail.active .title {
+  background: #D01254;
+}
+.press-item {
+  display: none;
+}
+.press-item.active {
+  display: block;
+}
+.press-item-detail {
+  background: #fcdae6;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+  display: none;
+}
+.press-item-detail .contents {
+  border: solid 2px #000;
+  padding: 40px 25px;
+}
+.press-item-detail .contents section {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+}
+.press-item-detail .meta {
+  text-align: left;
+  text-transform: uppercase;
+}
+.press-item-detail .meta .text {
+  font-weight: 600;
+}
+.press-item-detail a {
+  color: #000;
+}
+.press-item-detail .actions {
+  text-align: right;
+  cursor: pointer;
 }
 
 /* CONTACT */
