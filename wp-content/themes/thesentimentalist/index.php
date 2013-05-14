@@ -54,6 +54,10 @@
     <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/to-top.png" alt="Back to Top" /></a>
   </div>
 
+  <div id="scroll-down">
+    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/scroll-down.png" alt="Scroll Down" /></a>
+  </div>
+
   <div id="content">
 
     <div id="home" class="content">

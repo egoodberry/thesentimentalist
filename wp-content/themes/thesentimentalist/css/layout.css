@@ -104,6 +104,13 @@ body {
   top: 200px;
   z-index: 1000;
 }
+#scroll-down {
+  display: none;
+  position: fixed;
+  right: 45%;
+  bottom: 0px;
+  z-index: 1000;
+}
 
 /* HOME */
 #home {
