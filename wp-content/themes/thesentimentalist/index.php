@@ -289,10 +289,12 @@
         }
       ?>
           </ul>
+          <a class="press-kit-download" href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf">
+            <h2 class="boxed">Download Press Kit</h2>
+          </a>
         </div>
       <?php } else { ?>
         <p>Stay tuned...</p>
-        <a href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf"><h2 class="boxed">Download Press Kit</h2></a>
       <?php } ?>
     </div>
 

@@ -3,12 +3,15 @@
     $('#press-thumbnail-wrapper').on('click', '.press-item-thumbnail', function() {
       $('.press-item-thumbnail').removeClass('active');
       $(this).addClass('active');
+
       var postId = $(this).data('press-id');
       var postDetail = $('.press-item[data-press-id=' + postId + ']')
       $('.press-item-detail .inner').empty().html(
         '<div class="contents">' + postDetail.html() + '</div>'
       );
-      $('.press-item-detail').slideDown();
+      $('.press-item-detail').slideDown(function() {
+        $(window).scrollTo($('.press-item-detail'), 500);
+      });
 
       $('.press-item-detail .close').click(function() {
         $('.press-item-detail').slideUp();

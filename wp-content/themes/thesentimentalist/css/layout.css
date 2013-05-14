@@ -274,8 +274,7 @@ body {
 }
 .press-item-thumbnail {
   display: inline-block;
-  margin-left: 30px;
-  margin-bottom: 60px;
+  margin: 0 15px 30px 15px;
   width: 300px;
   border: solid 2px #000;
   cursor: pointer;
@@ -304,6 +303,10 @@ body {
 }
 .press-item-thumbnail.active .title {
   background: #D01254;
+}
+.press-kit-download {
+  display: inline-block;
+  margin-bottom: 30px;
 }
 .press-item {
   display: none;
@@ -339,6 +342,8 @@ body {
 }
 .press-item-detail .actions {
   text-align: right;
+}
+.press-item-detail .actions a {
   cursor: pointer;
 }
 
