@@ -156,6 +156,9 @@
               <a href="http://www.leanimal.com/">Leanne Marshall</a>
             </p>
             <p>
+              <a href="http://www.nicolemiller.com/bridal">Nicole Miller</a>
+            </p>
+            <p>
               <a href="http://www.sarahseven.com/">Sarah Seven</a>
             </p>
             <p>
