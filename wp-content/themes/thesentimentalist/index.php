@@ -144,6 +144,9 @@
               <a href="http://www.annebarge.com/">Anne Barge</a>
             </p>
             <p>
+              <a href="http://www.carleesizemore.com/">Carlee Sizemore</a>
+            </p>
+            <p>
               <a href="http://carol-hannah.com/">Carol Hannnah</a>
             </p>
             <p>
@@ -151,9 +154,6 @@
             </p>
             <p>
               <a href="http://elizabethdye.com/">Elizabeth Dye</a>
-            </p>
-            <p>
-              <a href="http://roseanddelilah.com/">Rose & Delilah</a>
             </p>
             <p>
               <a href="http://www.leanimal.com/">Leanne Marshall</a>
@@ -165,10 +165,10 @@
               Olive
             </p>
             <p>
-              <a href="http://www.sarahseven.com/">Sarah Seven</a>
+              <a href="http://roseanddelilah.com/">Rose & Delilah</a>
             </p>
             <p>
-              <a href="http://www.carleesizemore.com/">Carlee Sizemore</a>
+              <a href="http://www.sarahseven.com/">Sarah Seven</a>
             </p>
             <p>
               <a href="http://www.theiacouture.com/Site/#/home">Theia</a>
