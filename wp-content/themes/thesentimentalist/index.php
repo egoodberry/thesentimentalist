@@ -141,6 +141,9 @@
             <h3>Designers</h3>
             <hr />
             <p>
+              <a href="http://www.annebarge.com/">Anne Barge</a>
+            </p>
+            <p>
               <a href="http://carol-hannah.com/">Carol Hannnah</a>
             </p>
             <p>
@@ -150,7 +153,7 @@
               <a href="http://elizabethdye.com/">Elizabeth Dye</a>
             </p>
             <p>
-              <a href="http://www.jessicafontaine.com/index.html">Jessica Fontaine</a>
+              <a href="http://roseanddelilah.com/">Rose & Delilah</a>
             </p>
             <p>
               <a href="http://www.leanimal.com/">Leanne Marshall</a>
@@ -159,7 +162,13 @@
               <a href="http://www.nicolemiller.com/bridal">Nicole Miller</a>
             </p>
             <p>
+              Olive
+            </p>
+            <p>
               <a href="http://www.sarahseven.com/">Sarah Seven</a>
+            </p>
+            <p>
+              <a href="http://www.carleesizemore.com/">Carlee Sizemore</a>
             </p>
             <p>
               <a href="http://www.theiacouture.com/Site/#/home">Theia</a>
