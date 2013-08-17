@@ -73,13 +73,12 @@
           <p class="summary">
             The Sentimentalist is a designer and vintage bridal shop in Atlanta’s
             Westside neighborhood. They believe in simple designs, a beautiful space,
-            and a lovely dress-shopping experience. The Sentimentalist is overjoyed to
-            be bringing some of their favorite American designers to Atlanta beginning
-            May 4, 2013.
+            and a lovely dress-shopping experience. The Sentimentalist is overjoyed
+            to be bringing some of their favorite American designers to Atlanta.
           </p>
           <p>
             Email <a href="mailto:info@thesentimentalistatl.com" target="_blank">info@thesentimentalistatl.com</a>
-            for for an opening weekend appointment!
+            for an opening weekend appointment!
           </p>
 
           <div class="grid_6 prefix_3 about-founders">
@@ -301,10 +300,10 @@
         }
       ?>
           </ul>
-          <a class="press-kit-download" href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf">
-            <h2 class="boxed">Download Press Kit</h2>
-          </a>
         </div>
+        <a class="press-kit-download" href="<?php bloginfo('template_directory'); ?>/content/sentimentalist-press-kit.pdf">
+          <h2 class="boxed">Download Press Kit</h2>
+        </a>
       <?php } else { ?>
         <p>Stay tuned...</p>
       <?php } ?>
