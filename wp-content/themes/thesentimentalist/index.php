@@ -78,7 +78,7 @@
           </p>
           <p>
             Email <a href="mailto:info@thesentimentalistatl.com" target="_blank">info@thesentimentalistatl.com</a>
-            for an opening weekend appointment!
+            for an appointment!
           </p>
 
           <div class="grid_6 prefix_3 about-founders">
